@@ -212,7 +212,6 @@ public class CirclePageIndicator extends View implements PageIndicator {
             throw new IllegalStateException("ViewPager has not been bound.");
         }
         mViewPager.setCurrentItem(item);
-        mCurrentPage = item;
         invalidate();
     }
 
@@ -237,7 +236,6 @@ public class CirclePageIndicator extends View implements PageIndicator {
 
     @Override
     public void onPageSelected(int position) {
-        mCurrentPage = position;
         mSnapPage = position;
         invalidate();
 
